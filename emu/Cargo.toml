@@ -1,0 +1,22 @@
+[package]
+name = "stmimic"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# ARMv7 emulator + disassembler
+unicorn-engine = { git = "https://github.com/unicorn-engine/unicorn", branch = "dev" }
+keystone = "0.9.0"
+capstone = "0.12.0"
+
+# Utils
+stm32parser = { path = "../stm32parser" }
+env_logger = "0.11.3"
+log = "0.4.21"
+lazy_static = "1.4.0"
+
+# For the future( from pinephone emu )
+addr2line = "0.22.0"
+gimli = "0.29.0"
+once_cell = "1.19.0"
+gpt = "3.1.0"
